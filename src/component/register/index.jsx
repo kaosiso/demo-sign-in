@@ -4,6 +4,7 @@ import { auth, db } from '../firebase/firebase'
 import { setDoc, doc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 import { FaUser } from "react-icons/fa";
+import { Link } from 'react-router-dom'
 
 
 
@@ -97,7 +98,10 @@ function Register() {
                     </div>
                     <div className='flex mt-4 justify-end'>
                         <p className='text-sm '>Already have an account ?</p>
-                        <button className='text-sm underline text-blue-500' onClick="location.href='/login">Login</button>
+                        <Link
+                        className='text-sm underline text-blue-500' to="/login">
+                            Login
+                        </Link>
                     </div>
 
                 </form>
